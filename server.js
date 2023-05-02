@@ -1,8 +1,4 @@
-// import {verify} from "./views/Auth/auth.cjs";
-// import './views/Auth/auth.cjs'
-// import 'ejs'
 const { localsName } = require("ejs");
-// import express from 'express'
 const express = require("express")
 const app = express()
 
