@@ -1,0 +1,27 @@
+{
+  "name": "social-media-app",
+  "version": "1.0.0",
+  "description": "An Instagram copy for a scoial media app",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/w-i-l/social-media-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/w-i-l/social-media-app/issues"
+  },
+  "homepage": "https://github.com/w-i-l/social-media-app#readme",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
