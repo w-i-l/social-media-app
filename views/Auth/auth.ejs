@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Auth</title>
     <link rel="stylesheet" href="/css/auth.css"/>
+    <script type="module" src="auth.cjs"></script>
 </head>
 <body>
     
@@ -16,8 +17,8 @@
             <form class="auth_field" method="POST">
                 <input placeholder="username" name="username" value="mishu"/>
                 <input type="email" name="email" placeholder="email" value="mihai@gmail.com"/>
-                <input type="" name="password" placeholder="password" value="1234"/>
-                <input type="submit" value="Proceed" />
+                <input type="" name="password" placeholder="password" value="123456789"/>
+                <input type="submit" value="Proceed" onclick='verify' />
             </form> 
 
         </div>

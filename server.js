@@ -1,4 +1,8 @@
+// import {verify} from "./views/Auth/auth.cjs";
+// import './views/Auth/auth.cjs'
+// import 'ejs'
 const { localsName } = require("ejs");
+// import express from 'express'
 const express = require("express")
 const app = express()
 
@@ -19,14 +23,7 @@ app.get('/', (req, res) =>{
     }
 })
 
-app.get('/auth', (req, res) =>{
-    res.render('Auth/auth')
-})
-
-app.post('/auth', (req, res) => {
-    users.push(req.body)
-    res.render('Main/main')
-    loggedIn = true
-})
+const authRouter = require('./views/Auth/auth.js');
+app.use('/auth', authRouter);
 
 app.listen(3000)
