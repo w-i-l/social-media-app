@@ -14,7 +14,10 @@
     <%- include('../Menu/menu.ejs') %>
 
     <div class="posts">
-            <% var posts = Array(5).fill({username:'mishu', image:'image.jpg', description:'dasdasdasd'}) %>
+
+            <!-- <% console.log(locals); %> -->
+
+            <% var posts = locals.posts %>
             <% posts.forEach(function(post){ %>
                 <%- include('../Post/post.ejs', {post: post}); %>
             <% }); %>

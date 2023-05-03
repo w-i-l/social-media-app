@@ -1,8 +1,12 @@
 const express = require('express');
 const router = express.Router();
+const {getPosts} = require('./main.cjs');
 
-router.get('/', (req, res) => {
-    res.render('Main/main')
+
+router.get('/', async (req, res) => {
+    const posts = await getPosts();
+    console.log(posts);
+    res.render('Main/main', {posts:posts})
 })
 
 module.exports = router

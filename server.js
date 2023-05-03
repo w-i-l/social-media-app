@@ -5,7 +5,7 @@ const app = express()
 const users = []
 let loggedIn = false
 
-app.set('view engine', 'ejs')
+app.set('view engine', 'ejs');
 
 app.use(express.static('public'));
 app.use(express.urlencoded({extended:true}))
