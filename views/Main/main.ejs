@@ -1,12 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<style>
-    body{
-        background-color: burlywood;
-    }
-</style>
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,8 +10,11 @@
     <!-- <meta http-equiv="refresh" content="1"> -->
 </head>
 <body>
+
+    <%- include('../Menu/menu.ejs') %>
+
     <div class="posts">
-            <% var posts = Array(5).fill({username:'mishu', image:'css/image.jpg', description:'dasdasdasd'}) %>
+            <% var posts = Array(5).fill({username:'mishu', image:'image.jpg', description:'dasdasdasd'}) %>
             <% posts.forEach(function(post){ %>
                 <% console.log(post) %>
                 <%- include('../Post/post.ejs', {post: post}); %>

@@ -1,0 +1,44 @@
+:root{
+    --background_primary:#1c0d33;
+    --background_secondary:#391471;
+    --white:#dfdfdf;
+    --purple:#4d1fd6
+}
+
+
+nav{
+    background-color: var(--purple);
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo img{
+    aspect-ratio: 1/1;
+    width: 50px;
+}
+
+nav ul{
+    display: flex;
+    gap: 40px;
+    align-items:center;
+    margin: 0 20px;
+    padding: 20px;
+    justify-content: end;
+}
+
+nav ul li{
+    list-style-type: none;
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+nav ul li:hover{
+    color:var(--background_primary)
+}
