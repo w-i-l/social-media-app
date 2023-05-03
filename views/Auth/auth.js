@@ -14,7 +14,7 @@ router.post('/', (req, res) => {
     if(result){
         res.render('Main/main.ejs');
     }else{
-        res.render("Auth/auth.ejs")
+        res.render("Auth/auth.ejs", req.body)
     }
 
 })

@@ -37,6 +37,7 @@ main form{
 
 body > main > div > form > input[type=submit]:nth-child(3){
     margin: 20px;
+    background-color: var(--white);
 }
 
 

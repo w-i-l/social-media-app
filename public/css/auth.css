@@ -60,6 +60,7 @@ input, select, textarea{
 
 body > main > div > form > input[type=submit]{
     margin: 20px;
+    background-color: var(--white);
 }
 
 .go_back{

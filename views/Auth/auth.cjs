@@ -14,4 +14,9 @@ function verify(credentials){
     return good_username && good_email && good_password;
 }
 
-module.exports = { verify };
+function save_credientials(){
+    const username = document.getElementsByName("username");
+    console.log(username);
+}
+
+module.exports = { verify, save_credientials };

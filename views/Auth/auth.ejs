@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Auth</title>
-    <link rel="stylesheet" href="/css/auth.css"/>
+    <link rel="stylesheet" href="css/auth.css"/>
     <script type="module" src="auth.cjs"></script>
 </head>
 <body>
@@ -15,10 +15,10 @@
             <h2>Create an account</h2>
     
             <form class="auth_field" method="POST">
-                <input placeholder="username" name="username" value="mishu"/>
-                <input type="email" name="email" placeholder="email" value="mihai@gmail.com"/>
-                <input type="" name="password" placeholder="password" value="123456789"/>
-                <input type="submit" value="Proceed" onclick='verify' />
+                <input placeholder="username" name="username" value="<%= locals.username %>"/>
+                <input type="email" name="email" placeholder="email" value="<%= locals.email %>"/>
+                <input type="" name="password" placeholder="password"/>
+                <input type="submit" value="Proceed" />
             </form> 
 
         </div>
