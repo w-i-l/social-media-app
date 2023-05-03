@@ -16,7 +16,6 @@
     <div class="posts">
             <% var posts = Array(5).fill({username:'mishu', image:'image.jpg', description:'dasdasdasd'}) %>
             <% posts.forEach(function(post){ %>
-                <% console.log(post) %>
                 <%- include('../Post/post.ejs', {post: post}); %>
             <% }); %>
     </div>

@@ -12,7 +12,7 @@ router.post('/', (req, res) => {
     const result = verify(req.body);
 
     if(result){
-        res.render('Main/main.ejs');
+        res.redirect('/main')
     }else{
         res.render("Auth/auth.ejs", req.body)
     }

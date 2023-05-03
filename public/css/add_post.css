@@ -1,0 +1,30 @@
+:root{
+    --background_primary:#1c0d33;
+    --background_secondary:#391471;
+    --white:#dfdfdf;
+    --purple:#4d1fd6
+}
+
+body{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: linear-gradient(var(--background_primary), var(--background_secondary));
+}
+
+.add_post{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.add_post form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.add_post form input{
+    border-radius: 10px;
+    padding: 10px;
+    
+}

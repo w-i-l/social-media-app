@@ -12,6 +12,7 @@ app.use(express.urlencoded({extended:true}))
 
 app.get('/', (req, res) =>{
     if(loggedIn){
+        // res.redirect('/')
         res.render('Main/main')
     }
     else{
@@ -21,5 +22,11 @@ app.get('/', (req, res) =>{
 
 const authRouter = require('./views/Auth/auth.js');
 app.use('/auth', authRouter);
+
+const mainRouter = require('./views/Main/main.js');
+app.use('/main', mainRouter);
+
+const addPostRouter = require('./views/Add_post/add_post.js');
+app.use('/add-post', addPostRouter);
 
 app.listen(3000)
