@@ -12,8 +12,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+    <!-- <meta http-equiv="refresh" content="1"> -->
 </head>
 <body>
-    Main
+    <div class="posts">
+            <% var posts = Array(5).fill({username:'mishu', image:'css/image.jpg', description:'dasdasdasd'}) %>
+            <% posts.forEach(function(post){ %>
+                <% console.log(post) %>
+                <%- include('../Post/post.ejs', {post: post}); %>
+            <% }); %>
+    </div>
 </body>
 </html>
