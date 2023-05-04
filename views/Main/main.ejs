@@ -15,8 +15,6 @@
 
     <div class="posts">
 
-            <!-- <% console.log(locals); %> -->
-
             <% var posts = locals.posts %>
             <% posts.forEach(function(post){ %>
                 <%- include('../Post/post.ejs', {post: post}); %>

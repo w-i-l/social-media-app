@@ -16,9 +16,13 @@ app.get('/', (req, res) =>{
         res.render('Main/main')
     }
     else{
-        res.render('SignIn/signin')
+        // res.render('SignIn/signin')
+        res.redirect('/sign')
     }
 })
+
+const signRouter = require('./views/SignIn/signin.js');
+app.use('/sign', signRouter);
 
 const authRouter = require('./views/Auth/auth.js');
 app.use('/auth', authRouter);

@@ -6,27 +6,7 @@ const { v4 } = require('uuid');
 
 const formidableMidleware = require('../middlewares/formidableMiddleware')
 
-function getPostsFilePath() {
-    return path.join('./', 'posts.json');
-}
-
-function getPosts() {
-    return new Promise((resolve, reject) => {
-        const filePath = getPostsFilePath();
-
-
-        fs.readFile(filePath, { encoding: 'utf8' }, (err, data) => {
-            if(err) {
-                resolve([]);
-            }
-            try {
-                resolve(JSON.parse(data));
-            } catch(err) {
-                resolve([]);
-            }
-        })
-    });
-}
+const {getPosts, getPostsFilePath} = require('./add_post.cjs')
 
 router.get('/',(req, res) => {
     res.render('Add_post/add_post')
@@ -53,9 +33,9 @@ router.post('/', formidableMidleware(), async (req, res) => {
 
     posts.push(newPost);
 
-    console.log(posts);
+    // console.log(posts);
 
-    fs.writeFile(getPostsFilePath(), JSON.stringify(posts), () => {
+    fs.writeFile(getPostsFilePath(), JSON.stringify(posts), (after) => {
         res.redirect('/main');
     });
 })

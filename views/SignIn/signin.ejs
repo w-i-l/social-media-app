@@ -14,9 +14,9 @@
     <div class="sign_in_box">
         <h2>Social name app</h2>
 
-        <form class="sign_in_field">
-            <input type="email" placeholder="email"/>
-            <input type="" placeholder="password" />
+        <form class="sign_in_field" method="POST">
+            <input type="email" name='email' placeholder="email" value="<% locals.email %>"/>
+            <input type="password" name="password" placeholder="password" value="<% locals.password %>"/>
             <input type="submit" value="Log In" />
         </form> 
 
