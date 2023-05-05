@@ -2,10 +2,8 @@ const fs = require('fs');
 const path = require('path');
 const { v4 } = require('uuid');
 
-const {getUsers, getUsersPath} = require('../Auth/auth.cjs');
-const { getUser } = require('../Account/account.cjs');
-const {getPosts, getPostsFilePath} = require('../Main/main.cjs');
-const {getUserByID} = require("../Add_post/add_post.cjs")
+const {getUsers, getUsersPath, getUserByID} = require('../functions/user.js');
+const {getPosts, getPostsPath} = require('../functions/post.js');
 
 const { express } = require('express');
 
@@ -26,13 +24,12 @@ async function modifyUser(user) {
     const posts = await getPosts();
 
     for(let i=0; i<posts.length; i++){
-        // console.log(posts[i]['username'], oldUsername, posts[i]['username'] == oldUsername)
         if(posts[i]['username'] == oldUsername){
             posts[i]['username'] = user['username'];
         }
     }
 
-    fs.writeFile(getPostsFilePath(), JSON.stringify(posts), () => {});
+    fs.writeFile(getPostsPath(), JSON.stringify(posts), () => {});
     fs.writeFile(getUsersPath(), JSON.stringify(users), () => {});
   }
   

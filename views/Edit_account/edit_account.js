@@ -4,10 +4,9 @@ const { v4 } = require('uuid');
 const express = require('express');
 const { compile } = require('ejs');
 
-const {getPostsFromUser, getUser} = require('../Account/account.cjs')
+const {getPostsFromUser} = require('../functions/user.js')
 const {modifyUser} = require("./edit_account.cjs")
-const {getUsers} = require("../Auth/auth.cjs")
-const {getUserByID} = require("../Add_post/add_post.cjs")
+const {getUsers, getUserByID} = require("../functions/user.js");
 
 const router = express.Router();
 

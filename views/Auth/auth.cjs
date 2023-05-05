@@ -2,6 +2,8 @@ const fs = require('fs');
 const path = require('path');
 const { v4 } = require('uuid');
 
+const {getUsers, getUsersPath} = require('../functions/user.js')
+
 function containsObject(obj, list) {
     for (let i = 0; i < list.length; i++) {
         if (list[i]['email'] == obj['email']) {
@@ -28,34 +30,6 @@ function verify(credentials){
     return good_username && good_email && good_password;
 }
 
-function save_credientials(){
-    const username = document.getElementsByName("username");
-    console.log(username);
-}
-
-function getUsersPath(){
-    return'Users/users.json';
-}
-
-function getUsers(){
-    return new Promise((resolve, reject) =>{
-        
-        const filePath = getUsersPath();
-
-        fs.readFile(filePath, { encoding: 'utf8' }, (err, data) => {
-            if(err) {
-                resolve([]);
-            }
-            try {
-                resolve(JSON.parse(data));
-            } catch(err) {
-                resolve([]);
-            }
-        })
-
-    })
-}
-
 async function addUser(user){
 
     const users = await getUsers();
@@ -71,4 +45,4 @@ async function addUser(user){
 
 }
 
-module.exports = { verify, save_credientials, getUsersPath, getUsers, addUser, containsObject };
+module.exports = { verify, addUser, containsObject };

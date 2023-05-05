@@ -6,8 +6,8 @@ const { v4 } = require('uuid');
 
 const formidableMidleware = require('../middlewares/formidableMiddleware')
 
-const {getPosts, getPostsFilePath, getUserByID} = require('./add_post.cjs')
-const {getUser} = require('../Account/account.cjs');
+const {getPosts, getPostsPath} = require('../functions/post.js')
+const {getUserByID} = require('../functions/user.js');
 
 router.get('/',(req, res) => {
     res.render('Add_post/add_post')
@@ -37,9 +37,7 @@ router.post('/', formidableMidleware(), async (req, res) => {
 
     posts.push(newPost);
 
-    // console.log(posts);
-
-    fs.writeFile(getPostsFilePath(), JSON.stringify(posts), (after) => {
+    fs.writeFile(getPostsPath(), JSON.stringify(posts), (after) => {
         res.redirect('/main');
     });
 })

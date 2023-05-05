@@ -4,8 +4,7 @@ const { v4 } = require('uuid');
 const express = require("express");
 const cookieParser = require('cookie-parser'); 
 
-const { containsObject, getUsers } = require('../Auth/auth.cjs');
-const {userExists} = require('./signin.cjs')
+const {getUserByEmailAndPassword} = require('./signin.cjs')
 
 const router = express.Router();
 
@@ -28,12 +27,11 @@ router.post('/', async (req, res) => {
         password:req.body.password,
     }
         
-    const user = await userExists(newUser);
+    const user = await getUserByEmailAndPassword(newUser);
 
     console.log(user)
 
     if(user){
-        console.log(user['id'])
         res.cookie('id', user['id']);
         res.redirect('/main');
     }

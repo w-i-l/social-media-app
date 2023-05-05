@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const {getPosts} = require('./main.cjs');
+const {getPosts} = require('../functions/post.js');
 
 
 router.get('/', async (req, res) => {
