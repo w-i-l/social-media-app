@@ -23,7 +23,7 @@ router.post('/', (req, res) => {
         }
         
         addUser(newUser);
-        res.redirect('/main')
+        res.redirect('/sign')
     }else{
         res.render("Auth/auth.ejs", req.body)
     }

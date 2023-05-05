@@ -1,12 +1,14 @@
 const { localsName } = require("ejs");
-const express = require("express")
-const app = express()
+const express = require("express");
+const app = express();
+const cookieParser = require('cookie-parser');
 
 const users = []
 let loggedIn = false
 
 app.set('view engine', 'ejs');
 
+app.use(cookieParser());
 app.use(express.static('public'));
 app.use(express.urlencoded({extended:true}))
 

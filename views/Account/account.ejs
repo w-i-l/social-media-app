@@ -13,20 +13,22 @@
     <div class="background"></div>
 
     <%- include('../Menu/menu.ejs') %>
-    
+
     <div class="account">
 
         <div class='credientials'>
             <p>username:</p>
-            <h3><% locals.username %></h3>
+            <h3><%- locals.username %></h3>
         </div>
 
         <div class='credientials'>
             <p>email:</p>
-            <h3><% locals.email %></h3>
+            <h3><%- locals.email %></h3>
         </div>
         
-        <a href="/">Log out</a>
+        <form method="post">
+            <input type="submit" value="Log out"/>
+        </form>
     </div>
 
 

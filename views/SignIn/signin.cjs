@@ -11,7 +11,7 @@ async function userExists(user){
     for (i = 0; i < users.length; i++) {
         if (users[i]['email'] == user['email']
             && users[i]['password'] == user['password']) {
-            return true;
+            return users[i];
         }
     }
 
