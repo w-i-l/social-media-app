@@ -1,14 +1,26 @@
-:root{
-    --background_primary:#1c0d33;
-    --background_secondary:#391471;
-    --white:#dfdfdf;
-    --purple:#4d1fd6
-}
-
 body{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    /* background: linear-gradient(var(--background_primary), var(--background_secondary)); */
 }
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--background_primary);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--menu_background);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--menu_background)
+  }
 
 * {
     margin: 0;
@@ -27,7 +39,7 @@ body{
 
 .posts{
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }

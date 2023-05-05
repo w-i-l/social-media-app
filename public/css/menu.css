@@ -1,16 +1,10 @@
-:root{
-    --background_primary:#1c0d33;
-    --background_secondary:#391471;
-    --white:#dfdfdf;
-    --purple:#4d1fd6
-}
-
 
 nav{
-    background-color: var(--purple);
+    background:linear-gradient(var(--menu_background), var(--menu_background), var(--background_primary));
     display: flex;
     justify-content: space-between;
     width: 100%;
+    flex-wrap: wrap;
 }
 
 .logo{
@@ -19,11 +13,13 @@ nav{
     align-items: center;
     gap: 20px;
     padding-left: 20px;
+    color: var(--white);
 }
 
 .logo img{
     aspect-ratio: 1/1;
     width: 50px;
+    filter: invert(100%);
 }
 
 nav ul{

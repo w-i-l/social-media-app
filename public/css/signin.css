@@ -1,17 +1,22 @@
-:root{
-    --background_primary:#1c0d33;
-    --background_secondary:#391471;
-    --white:#dfdfdf;
-    --purple:#4d1fd6
-}
-
 
 body{
-    /* background-color: #1c0d33; */
     height: 100vh;
-    background: linear-gradient(var(--background_primary), var(--background_secondary));
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     overflow-y: hidden  ;
+}
+
+.background{
+    background: linear-gradient(var(--background_primary), var(--background_secondary));
+    position: fixed;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
 }
 
 .sign_in_box{
@@ -32,7 +37,8 @@ body{
 main form{
     display: flex;
     flex-direction: column;
-    gap: 3px;
+    gap: 7px;
+    margin: 15px;
 }
 
 body > main > div > form > input[type=submit]:nth-child(3){
@@ -40,19 +46,17 @@ body > main > div > form > input[type=submit]:nth-child(3){
     background-color: var(--white);
 }
 
+body > main > div > form > input[type=submit]:hover{
+    background-color: var(--accent_secondary);
+}
 
 main form input{
     min-width: 15vw;
     height: 5vh;
     border-radius: 10px;
     padding: 0px 10px;
-}
-
-@media(max-width:480px){
-    main form input{
-        min-width: 200px;
-        height: 30px;
-    }
+    border: 0px;
+    cursor: pointer;
 }
 
 
@@ -68,8 +72,8 @@ input, select, textarea{
 
 .choose_an_alternative > hr {
     border: solid 1px var(--white);
-    transform:rotate(90deg);
     margin: 10px;
+    width: 5vw;
 }
 
 .choose_an_alternative > h3{
@@ -78,10 +82,21 @@ input, select, textarea{
 }
 
 .create_account a{
-    color: var(--purple);
+    color: var(--accent_secondary);
     text-decoration: none;
 }
 
 .create_account a:hover{
     color: var(--white);
+}
+
+@media(max-width:480px){
+    .sign_in_box form input{
+        min-width: 200px;
+        height: 2.5rem;
+    }
+
+    .choose_an_alternative > hr {
+        border: solid 1.5px var(--white);
+    }
 }

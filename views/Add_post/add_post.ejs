@@ -7,6 +7,7 @@
     <title>Add post</title>
     <link rel="icon" type="image/x-icon" href="/logo.png">
     <link rel="stylesheet" href="css/add_post.css">
+    <link rel="stylesheet" href="css/colors.css">
     <script src="scripts/add_post.js" defer></script>   
 </head>
 <body>
@@ -25,9 +26,13 @@
 
        <form method="POST" enctype="multipart/form-data">
             <!-- <input name="username" placeholder="username" required/> -->
-            <input type="file" name="image" placeholder="image" required/>
-            <textarea name="description" placeholder="description" required></textarea>
-            <input type="submit"/>
+            <div class="inputFile">
+                <input type="file" id='file' name="image" placeholder="image" accept="image/png, image/gif, image/jpeg, image/jpg"required/>
+                <label name='image_label'for="file">Choose a file</label>
+                <img src="upload.png">
+            </div>
+            <textarea name="description" placeholder="description..." maxlength="51" required></textarea>
+            <input type="submit" value="Post"/>
         </form>
 
     </main>
