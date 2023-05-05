@@ -11,14 +11,7 @@ app.use(express.static('public'));
 app.use(express.urlencoded({extended:true}))
 
 app.get('/', (req, res) =>{
-    if(loggedIn){
-        // res.redirect('/')
-        res.render('Main/main')
-    }
-    else{
-        // res.render('SignIn/signin')
         res.redirect('/sign')
-    }
 })
 
 const signRouter = require('./views/SignIn/signin.js');
@@ -32,5 +25,8 @@ app.use('/main', mainRouter);
 
 const addPostRouter = require('./views/Add_post/add_post.js');
 app.use('/add-post', addPostRouter);
+
+const accountRouter = require('./views/Account/account.js');
+app.use('/account', accountRouter);
 
 app.listen(3000)

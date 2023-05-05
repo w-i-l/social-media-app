@@ -1,0 +1,50 @@
+:root{
+    --background_primary:#1c0d33;
+    --background_secondary:#391471;
+    --white:#dfdfdf;
+    --purple:#4d1fd6
+}
+
+body{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.account{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.background{
+    background: linear-gradient(var(--background_primary), var(--background_secondary));
+    position: fixed;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+}
+
+.credientials{
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+}
+
+
+.account > a{
+    font-size: large;
+    text-decoration: none;
+    color:var(--white)
+}
+
+.account > a:hover{
+    color: var(--purple);
+}
