@@ -4,7 +4,7 @@ const { v4 } = require('uuid');
 const express = require("express");
 const cookieParser = require('cookie-parser'); 
 
-const {getUserByEmailAndPassword} = require('./signin.cjs')
+const {getUserByEmailAndPassword} = require('../functions/user')
 
 const router = express.Router();
 
@@ -22,14 +22,10 @@ router.get('/', (req, res) => {
 
 router.post('/', async (req, res) => {
 
-    const newUser = {
-        email:req.body.email,
-        password:req.body.password,
-    }
+    const email = req.body.email;
+    const password = req.body.password;
         
-    const user = await getUserByEmailAndPassword(newUser);
-
-    console.log(user)
+    const user = await getUserByEmailAndPassword(email, password);
 
     if(user){
         res.cookie('id', user['id']);
