@@ -6,16 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add post</title>
     <link rel="stylesheet" href="css/add_post.css">
+    <script src="scripts/add_post.js" defer></script>   
 </head>
 <body>
+
+
+
+    <div class="background"></div>
+
     <div class="add_post">
 
+        
         <%- include('../Menu/menu.ejs') %>
-
-        <%- include('../Post/post.ejs', {post: {}}); %>
+        
+        <%- include('../Post/post.ejs', {post: {username:'username', image:'image.png', description:'description'}}); %>
     
 
-        <form method="POST" enctype="multipart/form-data">
+       <form method="POST" enctype="multipart/form-data">
             <input name="username" placeholder="username" required/>
             <input type="file" name="image" placeholder="image" required/>
             <textarea name="description" placeholder="description" required></textarea>

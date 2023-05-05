@@ -7,8 +7,23 @@
 
 body{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background: linear-gradient(var(--background_primary), var(--background_secondary));
+    /* background: linear-gradient(var(--background_primary), var(--background_secondary)); */
 }
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.background{
+    background: linear-gradient(var(--background_primary), var(--background_secondary));
+    position: fixed;
+    z-index: -1;
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+}
+
 
 .posts{
     display: flex;

@@ -26,3 +26,4 @@ function getPosts() {
 }
 
 module.exports = {getPosts, getPostsFilePath}
+
