@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
 
     const {cookies} = req;
 
-    if(cookies['email']){
+    if(cookies['id']){
         res.redirect('/main');
     }
     else{
@@ -23,15 +23,18 @@ router.get('/', (req, res) => {
 
 router.post('/', async (req, res) => {
 
-    const user = {
+    const newUser = {
         email:req.body.email,
         password:req.body.password,
     }
         
-    const result = await userExists(user);
+    const user = await userExists(newUser);
 
-    if(result){
-        res.cookie('email', req.body.email);
+    console.log(user)
+
+    if(user){
+        console.log(user['id'])
+        res.cookie('id', user['id']);
         res.redirect('/main');
     }
     else{

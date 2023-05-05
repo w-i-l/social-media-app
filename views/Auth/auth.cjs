@@ -3,11 +3,8 @@ const path = require('path');
 const { v4 } = require('uuid');
 
 function containsObject(obj, list) {
-    var i;
-    for (i = 0; i < list.length; i++) {
-        if (list[i]['username'] == obj['username']
-            && list[i]['email'] == obj['email']
-            && list[i]['password'] == obj['password']) {
+    for (let i = 0; i < list.length; i++) {
+        if (list[i]['id'] == obj['id']) {
             return true;
         }
     }

@@ -17,13 +17,14 @@ router.post('/', (req, res) => {
     if(result){
         
         const newUser = {
+            id:v4(),
             username: req.body.username,
             email: req.body.email,
             password: req.body.password,
         }
         
         addUser(newUser);
-        res.redirect('/sign')
+        res.redirect('/sign');
     }else{
         res.render("Auth/auth.ejs", req.body)
     }

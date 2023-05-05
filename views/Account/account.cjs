@@ -21,7 +21,7 @@ async function getUser(email){
 async function getPostsFromUser(user){
 
     const allPosts = await getPosts();
-    console.log(allPosts);
+    // console.log(allPosts);
 
     return allPosts.filter((post) => {return post['username'] == user['username']});
 
