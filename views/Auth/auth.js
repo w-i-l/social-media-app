@@ -23,8 +23,15 @@ router.post('/', (req, res) => {
             password: req.body.password,
         }
         
-        addUser(newUser);
-        res.redirect('/sign');
+        const result = addUser(newUser);
+        
+        if(result){
+            res.redirect('/sign');
+        }
+        else{
+            res.render("Auth/auth.ejs", req.body);
+        }
+
     }else{
         res.render("Auth/auth.ejs", req.body)
     }
