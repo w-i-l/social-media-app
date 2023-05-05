@@ -18,18 +18,17 @@
     <div class="account">
 
         <div class='credientials'>
-            <p>username:</p>
-            <h3><%- locals.user.username %></h3>
+            <div class="greet">
+                <p>Welcome back,&NonBreakingSpace;</p>
+                <h3><%- locals.user.username %> <span>!</span></h3>
+            </div>
+            <a href="/edit_account">Settings</a>
         </div>
 
-        <div class='credientials'>
+        <!-- <div class='credientials'>
             <p>email:</p>
             <h3><%- locals.user.email %></h3>
-        </div>
-
-        <div class="credientials">
-            <a href="/edit_account">Edit account</a>
-        </div>
+        </div> -->
         
         <h4>Your posts</h4>
         

@@ -3,6 +3,26 @@ body{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--background_primary);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: var(--menu_background);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--menu_background)
+  }
+
 * {
     margin: 0;
     padding: 0;
@@ -29,20 +49,32 @@ body{
 .credientials{
     margin: 20px;
     display: flex;
-    justify-content: center;
+    justify-content:center;
     align-items: center;
     color: var(--white);
+    gap: 2rem
 }
 
-
-.account > a{
-    font-size: large;
-    text-decoration: none;
-    color:var(--white)
+.credientials p {
+    font-size: 1.2rem;
 }
 
-.account > a:hover{
+.credientials h3{
     color: var(--accent_secondary);
+}
+
+.greet{
+    display: flex;
+}
+
+.credientials > a{
+    color: var(--accent_secondary);
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+.credientials > a:hover{
+    color: var(--white);
 }
 
 .account > h4{
@@ -55,4 +87,18 @@ body{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+}
+
+body > div.account > form > input[type=submit]{
+    border: 0px;
+    border-radius: 10px;
+    background-color: color(--white);
+    font-weight: 600;
+    min-width: 15vw;
+    height: 5vh;
+}
+
+body > div.account > form > input[type=submit]:hover{
+    background-color: var(--accent_secondary);
+    cursor: pointer;
 }
