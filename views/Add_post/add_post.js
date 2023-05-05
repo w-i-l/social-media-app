@@ -7,6 +7,7 @@ const { v4 } = require('uuid');
 const formidableMidleware = require('../middlewares/formidableMiddleware')
 
 const {getPosts, getPostsFilePath} = require('./add_post.cjs')
+const {getUser} = require('../Account/account.cjs');
 
 router.get('/',(req, res) => {
     res.render('Add_post/add_post')
@@ -20,8 +21,11 @@ router.post('/', formidableMidleware(), async (req, res) => {
     const fileName = v4() + '.' + file.originalFilename.split('.').at(-1);
     const picturePath = path.join('./public/images', fileName);
 
+    const email = req.cookies['email'];
+    const user = await getUser(email);
+
     const newPost = {
-        username: req.body.username,
+        username: user['username'],
         image: '/images/' + fileName,
         description: req.body.description,
     }

@@ -28,6 +28,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: 20px;
 }
 
 
@@ -48,4 +49,16 @@ body{
 
 .account > a:hover{
     color: var(--purple);
+}
+
+.account > h4{
+    color: var(--white);
+    font-size: x-large;
+}
+
+.posts{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }

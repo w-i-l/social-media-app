@@ -5,21 +5,18 @@ const express = require('express');
 const { route } = require('../SignIn/signin');
 const { compile } = require('ejs');
 
-const {getUser} = require('./account.cjs')
+const {getUser, getPostsFromUser} = require('./account.cjs')
 
 const router = express.Router();
 
 router.get("/", async (req, res) => {
     const {cookies} = req;
     const email = cookies['email'];
-    const userResponse = await getUser(email);
+    const user = await getUser(email);
 
-    const user = {
-        username:userResponse['username'],
-        email:userResponse['email'],
-    }
-
-    res.render('Account/account', user);
+    const userPosts = await getPostsFromUser(user);
+    console.log(user, userPosts);
+    res.render('Account/account', {'user':user, 'userPosts':userPosts});
 })
 
 router.post('/', (req, res) => {

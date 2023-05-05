@@ -18,14 +18,28 @@
 
         <div class='credientials'>
             <p>username:</p>
-            <h3><%- locals.username %></h3>
+            <h3><%- locals.user.username %></h3>
         </div>
 
         <div class='credientials'>
             <p>email:</p>
-            <h3><%- locals.email %></h3>
+            <h3><%- locals.user.email %></h3>
+        </div>
+
+        <div class="credientials">
+            <a href="/edit_account">Edit account</a>
         </div>
         
+        <h4>Your posts</h4>
+        
+        <div class='posts'>
+
+            <% var posts = locals.userPosts %>
+            <% posts.forEach(function(post){ %>
+                <%- include('../Post/post.ejs', {post: post}); %>
+            <% }); %>
+        </div>
+
         <form method="post">
             <input type="submit" value="Log out"/>
         </form>

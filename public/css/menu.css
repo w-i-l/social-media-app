@@ -46,10 +46,6 @@ nav ul li a{
     color: var(--white);
 }
 
-nav ul li a{
-
-}
-
 nav ul li:hover{
     color:var(--background_primary)
 }

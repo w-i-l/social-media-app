@@ -12,8 +12,21 @@ app.use(cookieParser());
 app.use(express.static('public'));
 app.use(express.urlencoded({extended:true}))
 
+// app.use((req, res, next) => {
+// 	const {cookies} = req;
+// 	console.log(cookies['email'])
+
+// 	if(cookies['email'] == undefined){
+// 		return res.redirect('/sign');
+// 	}
+// 	else{
+
+// 		next();
+// 	}
+// })
+
 app.get('/', (req, res) =>{
-        res.redirect('/sign')
+	res.redirect('/sign')
 })
 
 const signRouter = require('./views/SignIn/signin.js');
@@ -30,5 +43,8 @@ app.use('/add-post', addPostRouter);
 
 const accountRouter = require('./views/Account/account.js');
 app.use('/account', accountRouter);
+
+const editAccountRouter = require('./views/Edit_account/edit_account.js');
+app.use('/edit_account', editAccountRouter);
 
 app.listen(3000)

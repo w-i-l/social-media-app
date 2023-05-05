@@ -15,10 +15,10 @@ router.get('/', (req, res) => {
 
     if(cookies['email']){
         res.redirect('/main');
-        return;
     }
-
-    res.render('SignIn/signin');
+    else{
+        res.render('SignIn/signin');
+    }
 })
 
 router.post('/', async (req, res) => {
