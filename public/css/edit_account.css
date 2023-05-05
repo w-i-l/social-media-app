@@ -17,3 +17,54 @@ body{
     height: 100vh;
     margin: 0px;
 }
+
+.edit{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    margin-top: 40vh;
+}
+
+.change_username{
+    display: flex;
+    flex-direction: column;
+    margin: 40px 0px;
+}
+
+.change_username label{
+    color:var(--white);
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+
+#username{
+    border: 0px;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+}    
+
+body > div.edit > form > input[type=submit]:nth-child(2){
+    border: 0px;
+    border-radius: 10px;
+    background-color: color(--white);
+    font-weight: 600;
+    min-width: 10vw;
+    height: 5vh;
+    font-size: 1.2rem;
+}
+
+body > div.edit > form > input[type=submit]:nth-child(2):hover{
+    background-color: var(--accent_secondary);
+    cursor: pointer;
+}
+
+@media(max-width:480px){
+    .edit{
+        margin-top: 50%;
+    }
+}

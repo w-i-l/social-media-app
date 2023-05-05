@@ -14,10 +14,14 @@
     <div class="background"></div>
 
     <%- include('../Menu/menu.ejs') %>
-
-    <form method="POST">
-        <input name='username' placeholder="username">
-        <input type="submit" value="Save">
-    </form>
+    <div class="edit">
+        <form method="POST">
+            <div class="change_username">
+                <label for="username" >Entry your new username:</label>
+                <input name='username' id="username" placeholder="username">
+            </div>
+            <input type="submit" value="Save">
+        </form>
+    </div>
 </body>
 </html>
