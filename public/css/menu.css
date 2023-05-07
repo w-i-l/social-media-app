@@ -22,13 +22,17 @@ nav{
     filter: invert(100%);
 }
 
+.search{
+    padding: 20px;
+}
+
 nav ul{
     display: flex;
     gap: 40px;
     align-items:center;
     margin: 0 20px;
-    padding: 20px;
     justify-content: end;
+    padding: 20px;
 }
 
 nav ul li{

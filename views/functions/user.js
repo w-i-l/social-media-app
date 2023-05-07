@@ -64,6 +64,20 @@ async function getUserByID(id){
 
 }
 
+async function getUserByUsername(username){
+
+    const users = await getUsers();
+
+    for(let i=0; i<users.length; i++){
+        if(users[i]['username'] == username){
+            return users[i];
+        }
+    }
+
+    return undefined;
+
+}
+
 async function getUserByEmailAndPassword(email, password){
 
     const users = await getUsers(); 
@@ -85,4 +99,4 @@ async function getUsersIDS(){
 
 }
 
-module.exports = {getUsers, getUsersPath, getUserByID, getUserByEmail, getUserByEmailAndPassword, getUsersIDS, isUserInUsersIDS};
+module.exports = {getUsers, getUsersPath, getUserByID, getUserByUsername, getUserByEmail, getUserByEmailAndPassword, getUsersIDS, isUserInUsersIDS};
