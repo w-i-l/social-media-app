@@ -25,12 +25,31 @@ function getPosts() {
     });
 }
 
-async function getPostsFromUserByUsername(username){
+async function getPostsFromUserByUsername(id){
 
     const allPosts = await getPosts();
 
-    return allPosts.filter((post) => {return post['username'] == username});
+    return allPosts.filter((post) => {return post['username'] == id});
 
 }
 
-module.exports = {getPostsPath, getPosts, getPostsFromUserByUsername};
+async function getPostsWithUsernameFrom(posts){
+
+    const {getUserByID} = require('./user.js')
+
+    // const posts = await getPosts();
+
+    const newPosts = await Promise.all(posts.map(async (post) => {
+
+        const user = await getUserByID(post['username']);
+
+        return {
+            ...post,
+            username: user['username'],
+        };
+    }));
+
+    return newPosts;
+}
+
+module.exports = {getPostsPath, getPosts, getPostsFromUserByUsername, getPostsWithUsernameFrom};

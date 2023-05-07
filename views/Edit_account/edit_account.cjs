@@ -21,15 +21,15 @@ async function modifyUser(user) {
         }
     }
     
-    const posts = await getPosts();
+    // const posts = await getPosts();
 
-    for(let i=0; i<posts.length; i++){
-        if(posts[i]['username'] == oldUsername){
-            posts[i]['username'] = user['username'];
-        }
-    }
+    // for(let i=0; i<posts.length; i++){
+    //     if(posts[i]['username'] == oldUsername){
+    //         posts[i]['username'] = user['username'];
+    //     }
+    // }
 
-    fs.writeFile(getPostsPath(), JSON.stringify(posts), () => {});
+    // fs.writeFile(getPostsPath(), JSON.stringify(posts), () => {});
     fs.writeFile(getUsersPath(), JSON.stringify(users), () => {});
   }
   

@@ -25,7 +25,7 @@ router.post('/', formidableMidleware(), async (req, res) => {
     const user = await getUserByID(id);
 
     const newPost = {
-        username: user['username'],
+        username: id,
         image: '/images/' + fileName,
         description: req.body.description,
     }
