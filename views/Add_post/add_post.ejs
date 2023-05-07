@@ -21,7 +21,7 @@
         
         <%- include('../Menu/menu.ejs') %>
         
-        <%- include('../Post/post.ejs', {post: {username:'username', image:'image.png', description:'description'}}); %>
+        <%- include('../Post/post.ejs', {post: {username:locals.username, image:'image.png', description:'description'}, id:locals.id}); %>
     
 
        <form method="POST" enctype="multipart/form-data">

@@ -6,7 +6,7 @@ const { route } = require('../SignIn/signin');
 const { compile } = require('ejs');
 
 const {getUserByID} = require('../functions/user.js');
-const {getPostsFromUserByUsername, getPostsWithUsernameFrom} = require('../functions/post.js')
+const {getPostsFromUserByID, getPostsWithUsernameFrom} = require('../functions/post.js')
 
 const router = express.Router();
 
@@ -17,9 +17,10 @@ router.get("/", async (req, res) => {
     const user = await getUserByID(id);
     const username = user['username'];
 
-    const userPosts = await getPostsFromUserByUsername(id);
+    const userPosts = await getPostsFromUserByID(id);
+    const ids = userPosts.map((post) => post['username']);
     const usernamePosts = await getPostsWithUsernameFrom(userPosts)
-    res.render('Account/account', {'user':user, 'userPosts':usernamePosts});
+    res.render('Account/account', {'user':user, 'userPosts':usernamePosts, ids:ids});
 })
 
 router.post('/', (req, res) => {

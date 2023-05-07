@@ -9,8 +9,12 @@ const formidableMidleware = require('../middlewares/formidableMiddleware')
 const {getPosts, getPostsPath} = require('../functions/post.js')
 const {getUserByID} = require('../functions/user.js');
 
-router.get('/',(req, res) => {
-    res.render('Add_post/add_post')
+router.get('/', async(req, res) => {
+
+    const id = req.cookies['id'];
+    const user = await getUserByID(id);
+
+    res.render('Add_post/add_post', {username:user['username'], id:id})
 })
 
 router.post('/', formidableMidleware(), async (req, res) => {

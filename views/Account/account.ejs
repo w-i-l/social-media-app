@@ -35,9 +35,10 @@
         <div class='posts'>
 
             <% var posts = locals.userPosts %>
-            <% posts.forEach(function(post){ %>
-                <%- include('../Post/post.ejs', {post: post}); %>
-            <% }); %>
+            <% var ids = locals.ids %>
+            <% for(let i=0; i<posts.length; i++){ %>
+                <%- include('../Post/post.ejs', {post: posts[i], id:ids[i]}); %>
+            <% }; %>
         </div>
 
         <form method="post">

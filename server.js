@@ -52,4 +52,7 @@ app.use('/account', accountRouter);
 const editAccountRouter = require('./views/Edit_account/edit_account.js');
 app.use('/edit_account', editAccountRouter);
 
+const userRouter = require('./views/User/user.js');
+app.use('/user', userRouter);
+
 app.listen(3000)

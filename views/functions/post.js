@@ -25,7 +25,7 @@ function getPosts() {
     });
 }
 
-async function getPostsFromUserByUsername(id){
+async function getPostsFromUserByID(id){
 
     const allPosts = await getPosts();
 
@@ -52,4 +52,4 @@ async function getPostsWithUsernameFrom(posts){
     return newPosts;
 }
 
-module.exports = {getPostsPath, getPosts, getPostsFromUserByUsername, getPostsWithUsernameFrom};
+module.exports = {getPostsPath, getPosts, getPostsFromUserByID, getPostsWithUsernameFrom};

@@ -2,6 +2,16 @@ const fs = require('fs');
 const path = require('path');
 const { v4 } = require('uuid');
 
+function isUserInUsersIDS(usersIdsArray, userId) {
+
+    for (let i = 0; i < usersIdsArray.length; i++) {
+        if (usersIdsArray[i] == userId) {
+            return true;
+        }
+    }
+
+    return false;
+}
 
 function getUsersPath(){
     return'Users/users.json';
@@ -67,4 +77,12 @@ async function getUserByEmailAndPassword(email, password){
     return undefined;
 }
 
-module.exports = {getUsers, getUsersPath, getUserByID, getUserByEmail, getUserByEmailAndPassword};
+async function getUsersIDS(){
+    
+    const users = await getUsers(); 
+
+    return users.map((user) => user['id']);
+
+}
+
+module.exports = {getUsers, getUsersPath, getUserByID, getUserByEmail, getUserByEmailAndPassword, getUsersIDS, isUserInUsersIDS};

@@ -8,9 +8,10 @@ router.get('/', async (req, res) => {
 
     const allPosts = await getPosts();
 
+    const ids = allPosts.map((user) => user['username']);
     const posts = await getPostsWithUsernameFrom(allPosts);
 
-    res.render('Main/main', {posts:posts.reverse()})
+    res.render('Main/main', {posts:posts.reverse(), usernames:ids.reverse()})
 })
 
 module.exports = router
