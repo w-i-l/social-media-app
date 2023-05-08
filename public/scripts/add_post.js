@@ -1,5 +1,3 @@
-window.onload = () => {
-    
     // const username_form = document.getElementsByName('username')[0];
     const description_form = document.getElementsByName('description')[0];
     const image_form = document.getElementsByName('image')[0];
@@ -37,4 +35,3 @@ window.onload = () => {
         image_label.innerText = image_name;
 
     })
-}

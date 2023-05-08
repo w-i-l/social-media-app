@@ -14,23 +14,6 @@ app.use(cookieParser());
 app.use(express.static('public'));
 app.use(express.urlencoded({extended:true}))
 
-// app.use((req, res, next) => {
-// 	const {cookies} = req;
-// 	console.log(cookies['email'])
-
-// 	if(cookies['email'] == undefined){
-// 		return res.redirect('/sign');
-// 	}
-// 	else{
-
-// 		next();
-// 	}
-// })
-
-// app.use((req, res, next) => {
-// 	console.log(req.cookies['id']);
-// 	next();
-// })
 
 app.get('/', (req, res) =>{
 	res.redirect('/sign')
