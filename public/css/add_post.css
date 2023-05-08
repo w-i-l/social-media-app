@@ -20,9 +20,17 @@ body{
 
 .add_post{
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
+    margin-top: 10vh;
+}
+
+@media(max-width:480px){
+    .add_post{
+        margin-top: 20px;
+    }
 }
 
 .add_post form{
