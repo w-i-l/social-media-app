@@ -15,12 +15,11 @@
 
 
     <div class="background"></div>
-
+    
+    <%- include('../Menu/menu.ejs') %>
+    
     <div class="add_post">
 
-        
-        <%- include('../Menu/menu.ejs') %>
-        
         <%- include('../Post/post.ejs', {post: {username:locals.username, image:'image.png', description:'description'}, id:locals.id}); %>
     
 

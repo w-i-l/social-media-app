@@ -26,7 +26,11 @@ nav{
     padding: 20px;
 }
 
-nav ul{
+.links button{
+    display: none;
+}
+
+.links ul{
     display: flex;
     gap: 40px;
     align-items:center;
@@ -35,17 +39,40 @@ nav ul{
     padding: 20px;
 }
 
-nav ul li{
+.links ul li{
     list-style-type: none;
     font-size: 1.5rem;
     color: var(--white);
 }
 
-nav ul li a{
+.links ul li a{
     text-decoration: none;
     color: var(--white);
 }
 
-nav ul li:hover{
-    color:var(--background_primary)
+.links ul li a:hover{
+    color:var(--accent_secondary)
 }
+
+.search a{
+    text-decoration: none;
+    color: var(--white);
+    background-color: var(--background_secondary);
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.search a:hover{ 
+    background-color:var(--accent_secondary)
+}
+
+.search input{
+    min-width: 15vw;
+    height: 3vh;
+    border-radius: 10px;
+    padding: 0px 10px;
+    border: 0px;
+    cursor: pointer;
+}
+
+
