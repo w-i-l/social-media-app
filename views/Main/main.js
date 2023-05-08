@@ -14,18 +14,4 @@ router.get('/', async (req, res) => {
     res.render('Main/main', {posts:posts.reverse(), usernames:ids.reverse()})
 })
 
-router.post('/', async (req, res) => {
-    const username = req.body['username'];
-    const user = await getUserByUsername(username);
-
-    console.log(user)
-
-    if(user == undefined){
-        res.redirect('/main');
-        res.end();
-    }
-
-    res.redirect(`/user/${user['id']}`);
-})
-
 module.exports = router

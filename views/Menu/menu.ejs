@@ -7,19 +7,34 @@
     <title>Menu</title>
     <link rel="stylesheet" href="/css/menu.css">
     <link rel="stylesheet" href="css/colors.css">
+    <script>   
+        window.onload = () => {
+
+            const input = document.getElementsByTagName('input')[0];
+            const button = document.getElementsByName('search')[0];
+            
+            input.addEventListener('input', () => {
+                const user = input.value;   
+
+                console.log(user);
+                button.href = `/user/${user}`;
+            })
+
+        }
+    </script>
 </head>
 <body>
     <nav>
 
         <div class="logo">
             <h1>Social media app</h1>
-            <img src="/public/logo.png">
+            <img src="/logo.png">
         </div>
         
         <div class="search">
             <form method="POST">
                 <input name='username' placeholder="search a user...">
-                <input type="submit" value="search">
+                <a href=""  name='search'>Search</a>
             </form>
         </div>
 

@@ -3,6 +3,8 @@ const express = require("express");
 const app = express();
 const cookieParser = require('cookie-parser');
 
+const {getUserByID} = require('./views/functions/user')
+
 const users = []
 let loggedIn = false
 
