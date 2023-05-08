@@ -18,17 +18,26 @@ body{
     margin: 0px;
 }
 
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 .edit{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; 
-    margin-top: 40vh;
+    align-items: center;
+    height: 40vw;
 }
 
 .change_username{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     margin: 40px 0px;
 }
 

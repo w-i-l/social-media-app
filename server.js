@@ -40,4 +40,7 @@ app.use('/edit_account', editAccountRouter);
 const userRouter = require('./views/User/user.js');
 app.use('/user', userRouter);
 
+const errorRouter = require('./views/Error/error.js')
+app.use('/error', errorRouter);
+
 app.listen(3000)

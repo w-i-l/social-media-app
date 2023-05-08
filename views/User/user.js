@@ -19,8 +19,8 @@ router.get('/:user', async (req, res) => {
     
     if(searchedUser == undefined){
         res.status(404);
-        res.end();
-        return;
+        res.redirect('/error/404')
+        return res.end();
     }
 
     const id = searchedUser['id'];
