@@ -16,7 +16,7 @@ router.get('/', (req, res) => {
         res.redirect('/main');
     }
     else{
-        res.render('../views/SignIn/signin');
+        res.render('../var/task/views/SignIn/signin');
     }
 })
 
