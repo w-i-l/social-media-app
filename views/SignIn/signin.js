@@ -16,9 +16,10 @@ router.get('/', (req, res) => {
         res.redirect('/main');
     }
     else{
-        res.render('SignIn/signin.ejs');
+        res.render(path.join(__dirname, 'signin.ejs'));
     }
 })
+
 
 router.post('/', async (req, res) => {
 
