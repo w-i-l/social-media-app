@@ -29,11 +29,11 @@ router.post('/', (req, res) => {
             res.redirect('/sign');
         }
         else{
-            res.render("Auth/auth.ejs", req.body);
+            res.render(path.join(__dirname,"auth.ejs"), req.body);
         }
 
     }else{
-        res.render("Auth/auth.ejs", req.body)
+        res.render(path.join(__dirname,"auth.ejs"), req.body)
     }
 })
 

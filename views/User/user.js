@@ -31,7 +31,7 @@ router.get('/:user', async (req, res) => {
 
     const username = searchedUser['username'];
 
-    res.render("User/user", {userPosts:newPosts.reverse(), ids:ids, username:username});
+    res.render(path.join(__dirname,"user.ejs"), {userPosts:newPosts.reverse(), ids:ids, username:username});
 })
 
 

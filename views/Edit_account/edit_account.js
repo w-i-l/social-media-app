@@ -11,7 +11,7 @@ const {getUsers, getUserByID} = require("../functions/user.js");
 const router = express.Router();
 
 router.get('/', (req, res) => {
-    res.render('Edit_account/edit_account');
+    res.render(path.join(__dirname,'edit_account'));
 })
 
 router.post('/', async (req, res) => {

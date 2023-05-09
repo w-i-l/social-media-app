@@ -33,7 +33,7 @@ router.post('/', async (req, res) => {
         res.redirect('/main');
     }
     else{
-        res.render('SignIn/signin', user)
+        res.render(path.join(__dirname,'signin.ejs'), user)
     }
 
 })

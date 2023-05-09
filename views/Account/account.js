@@ -20,7 +20,7 @@ router.get("/", async (req, res) => {
     const userPosts = await getPostsFromUserByID(id);
     const ids = userPosts.map((post) => post['username']);
     const usernamePosts = await getPostsWithUsernameFrom(userPosts)
-    res.render('Account/account', {'user':user, 'userPosts':usernamePosts, ids:ids});
+    res.render(path.join(__dirname, 'account.ejs'), {'user':user, 'userPosts':usernamePosts, ids:ids});
 })
 
 router.post('/', (req, res) => {
