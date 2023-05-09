@@ -39,6 +39,20 @@ body{
     padding: 10px;
 }
 
+.auth_box form input{
+    min-width: 15vw;
+    height: 5vh;
+    border-radius: 10px;
+    padding: 0px 10px;
+    border: 0px;
+    cursor: pointer;
+    background-color: var(--white);
+}
+
+.auth_box form input:focus, .auth_box form input:hover{
+    outline: 3px solid var(--accent_secondary);
+}
+
 .auth_box h2{
     color: var(--white);
 }

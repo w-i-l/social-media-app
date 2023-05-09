@@ -44,3 +44,5 @@ const errorRouter = require('./views/Error/error.js')
 app.use('/error', errorRouter);
 
 app.listen(3000)
+
+module.exports = app

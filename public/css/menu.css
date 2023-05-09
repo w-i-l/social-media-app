@@ -5,6 +5,9 @@ nav{
     justify-content: space-between;
     width: 100%;
     flex-wrap: wrap;
+    padding: 5px;
+    position: sticky;
+    top: 0px;
 }
 
 .logo{
@@ -48,31 +51,38 @@ nav{
 .links ul li a{
     text-decoration: none;
     color: var(--white);
+    margin: 10px;
 }
 
 .links ul li a:hover{
-    color:var(--accent_secondary)
+    color:var(--accent_secondary);
 }
 
 .search a{
     text-decoration: none;
     color: var(--white);
     background-color: var(--background_secondary);
-    border-radius: 10px;
-    padding: 5px;
+    border-radius: 15px;
+    padding: 10px;
+    border: 1px solid var(--accent_secondary);
 }
 
 .search a:hover{ 
-    background-color:var(--accent_secondary)
+    background-color:var(--accent_secondary);
+    border: 1px solid var(--white);
 }
 
 .search input{
     min-width: 15vw;
-    height: 3vh;
+    height: 35px;
     border-radius: 10px;
     padding: 0px 10px;
     border: 0px;
     cursor: pointer;
+}
+
+.search input:focus, .search input:hover{
+    outline: 3px solid var(--accent_secondary);
 }
 
 

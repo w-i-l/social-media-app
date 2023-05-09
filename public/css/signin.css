@@ -57,8 +57,12 @@ main form input{
     padding: 0px 10px;
     border: 0px;
     cursor: pointer;
+    background-color: var(--white);
 }
 
+main form input:focus, main form input:hover{
+    outline: 3px solid var(--accent_secondary);
+}
 
 input, select, textarea{
     color: var(--background_primary);
