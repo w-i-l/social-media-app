@@ -5,7 +5,7 @@
 
     // const post_username = document.getElementsByClassName('user')[0].getElementsByTagName('h5')[0];
     const post_description = document.getElementsByClassName('description')[0].getElementsByTagName('p')[0];
-    const post_image = document.getElementsByClassName('post')[0].getElementsByTagName('img')[0];
+    const post_image = document.getElementsByClassName('post')[0].getElementsByTagName('img')[1];
     
     // username_form.addEventListener('input', () => {
     //      post_username.innerText = username_form.value;
