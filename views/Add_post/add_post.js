@@ -14,7 +14,7 @@ router.get('/', async(req, res) => {
     const id = req.cookies['id'];
     const user = await getUserByID(id);
 
-    res.render(path.join(__dirname,"add_post.ejs"), {username:user['username'], id:id})
+    res.render(path.join(__dirname,"add_post.ejs"), {profile_picture:user['profil_picture'], username:user['username'], profile_picture:user['profile_picture'], id:id})
 })
 
 router.post('/', formidableMidleware(), async (req, res) => {

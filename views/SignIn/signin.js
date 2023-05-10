@@ -12,6 +12,8 @@ router.get('/', (req, res) => {
 
     const {cookies} = req;
 
+    console.log(cookies['id']);
+
     if(cookies['id']){
         res.redirect('/main');
     }

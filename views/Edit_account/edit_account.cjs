@@ -17,6 +17,7 @@ async function modifyUser(user) {
         if (users[i]['id'] == user['id']) {
             oldUsername = users[i]['username'];
             users[i]['username'] = user['username'];
+            users[i]['profile_picture'] = user['profile_picture'];
             break;
         }
     }

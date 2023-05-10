@@ -20,7 +20,7 @@
 
 
         if(file == undefined){
-            post_image.src = 'image.png';
+            post_image.src = 'icons/image.png';
             image_label.innerText = 'Choose a file';
             return;
         }

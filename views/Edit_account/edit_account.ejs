@@ -8,20 +8,29 @@
     <title>Edit account</title>
     <link rel="stylesheet" href="css/edit_account.css">
     <link rel="stylesheet" href="css/colors.css">
+    <script src="scripts/edit_account.js" defer></script>   
 </head>
 <body>
 
     <div class="background"></div>
 
     <%- include('../Menu/menu.ejs') %>
-    <div class="edit">
-        <form method="POST">
+    <div class="edit" method="POST">
+        <form method="POST" enctype="multipart/form-data">
+            <div class="change_profile_picture">
+                <img src=<%= locals.profile_picture %>>
+                <div class="inputFile">
+                    <input type="file" id='file' name="image" placeholder="image" accept="image/png, image/gif, image/jpeg, image/jpg"required/>
+                    <label name='image_label' for="file">Change your avatar</label>
+                    <img src="icons/upload.png">
+                </div>
+            </div>
             <div class="change_username">
                 <label for="username" >Entry your new username:</label>
                 <input name='username' id="username" placeholder="username">
             </div>
             <input type="submit" value="Save">
-        </form>
+        </form>    
     </div>
 </body>
 </html>

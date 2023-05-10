@@ -65,6 +65,10 @@ body{
 
 .greet{
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .credientials > a{
@@ -101,4 +105,10 @@ body > div.account > form > input[type=submit]{
 body > div.account > form > input[type=submit]:hover{
     background-color: var(--accent_secondary);
     cursor: pointer;
+}
+
+.greet #profile_picture{
+    aspect-ratio: 1/1;
+    width: 150px;
+    border-radius: 50%;
 }

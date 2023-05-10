@@ -5,6 +5,7 @@ const cookieParser = require('cookie-parser');
 
 const {getUserByID} = require('./views/functions/user')
 
+
 const users = []
 let loggedIn = false
 
@@ -40,7 +41,7 @@ app.use('/edit_account', editAccountRouter);
 const userRouter = require('./views/User/user.js');
 app.use('/user', userRouter);
 
-const errorRouter = require('./views/Error/error.js')
+const errorRouter = require('./views/Error/error.js');
 app.use('/error', errorRouter);
 
 app.listen(3000)

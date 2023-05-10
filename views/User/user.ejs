@@ -15,7 +15,8 @@
     <%- include('../Menu/menu.ejs') %>
 
     <div class="user">
-        <h4><%- locals.username %></h4>
+        <img id="profile_picture" src=<%= locals.user.profile_picture %> >
+        <h4><%- locals.user.username  %></h4>
     </div>
 
     <div class='posts'>

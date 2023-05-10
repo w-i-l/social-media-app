@@ -46,6 +46,7 @@ async function getPostsWithUsernameFrom(posts){
         return {
             ...post,
             username: user['username'],
+            profile_picture: user['profile_picture'],
         };
     }));
 
