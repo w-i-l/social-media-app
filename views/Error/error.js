@@ -7,7 +7,7 @@ router.get('/:error', (req, res) => {
     const error = req.params.error;
 
     if(error == '404'){
-        res.render(path.join(__dirname,'404/404.ejs'));
+        res.render(path.join(__dirname,'404.ejs'));
     }
 })
 
