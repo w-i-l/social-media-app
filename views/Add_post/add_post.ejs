@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add post</title>
-    <link rel="icon" type="image/x-icon" href="/logo.png">
+    <link rel="icon" type="image/x-icon" href='icons/logo.png'>
     <link rel="stylesheet" href="css/add_post.css">
     <link rel="stylesheet" href="css/colors.css">
     <script src="scripts/add_post.js" defer></script>   
@@ -20,7 +20,7 @@
     
     <div class="add_post">
 
-        <%- include('../Post/post.ejs', {post: {username:locals.username, image:'image.png', description:'description'}, id:locals.id}); %>
+        <%- include('../Post/post.ejs', {post: {username:locals.username, image:'icons/image.png', description:'description'}, id:locals.id}); %>
     
 
        <form method="POST" enctype="multipart/form-data">
@@ -28,7 +28,7 @@
             <div class="inputFile">
                 <input type="file" id='file' name="image" placeholder="image" accept="image/png, image/gif, image/jpeg, image/jpg"required/>
                 <label name='image_label'for="file">Choose a file</label>
-                <img src="upload.png">
+                <img src="icons/upload.png">
             </div>
             <textarea name="description" placeholder="description..." maxlength="51" required></textarea>
             <input type="submit" value="Post"/>
