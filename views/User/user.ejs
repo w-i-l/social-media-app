@@ -24,7 +24,6 @@
         <% var posts = locals.userPosts %>
         <% var ids = locals.ids %>
         
-        <% console.log(posts) %>
         <% if(posts.length){ %>
             <% for(let i=0; i<posts.length; i++) { %>
             <%- include('../Post/post.ejs', {post: posts[i], id:ids[i]}); %>

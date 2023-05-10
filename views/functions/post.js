@@ -3,7 +3,7 @@ const path = require('path');
 const { v4 } = require('uuid');
 
 function getPostsPath() {
-    return path.join('./', 'posts.json');
+    return 'Posts/posts.json'
 }
 
 function getPosts() {

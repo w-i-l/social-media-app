@@ -22,7 +22,7 @@ router.post('/', formidableMidleware(), async (req, res) => {
     const posts = await getPosts();
 
     const file = req.files['image'];
-    const fileName = v4() + '.' + file.originalFilename.split('.').at(-1);
+    const fileName = v4() + '.jpg';
     const picturePath = path.join('./public/images', fileName);
 
     const id = req.cookies['id'];
