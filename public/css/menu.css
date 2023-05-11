@@ -62,14 +62,15 @@ nav{
     display: none;
     background-color: var(--background_primary);
     border-radius: 10px;
-    width: 100px;
+    width: 150px;
 }
 
 .links ul li:hover ul{
     display: flex;
     flex-direction: column;
     position:absolute;
-    transform: translate(-30px,0px);
+    transform: translate(-80px,0px);
+    gap: 10px;
 }
 
 .links > ul > li > ul > li:hover{
