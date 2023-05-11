@@ -1,1 +1,23 @@
-[{"id":"62f44ca1-dd31-4836-adf4-b37470f5e944","username":"mishu","email":"masterpaper01@gmail.com","password":"123456789","profile_picture":"/profile_pictures/356d5cc7-77d4-4e9b-84f3-b22017650a55.jpg"},{"id":"02693d67-05ee-44f4-8edc-f2fdd1a39ae0","username":"_thomas_","email":"thomas@yahoo.com","password":"123456789","profile_picture":"/profile_pictures/31071206-1a6a-4350-99e0-47d1cb3449ba.jpg"},{"id":"c28c7d6e-32fd-4f3e-b5a7-96630ee18e38","username":"JeNNy*","email":"jenny123@gmail.com","password":"123456789","profile_picture":"/profile_pictures/224356cd-4965-49cc-a8b8-c2d77ba8f30c.jpg"}]
+[
+    {
+        "id": "62f44ca1-dd31-4836-adf4-b37470f5e944",
+        "username": "mishu",
+        "email": "masterpaper01@gmail.com",
+        "password": "123456789",
+        "profile_picture": "/profile_pictures/356d5cc7-77d4-4e9b-84f3-b22017650a55.jpg"
+    },
+    {
+        "id": "02693d67-05ee-44f4-8edc-f2fdd1a39ae0",
+        "username": "_thomas_",
+        "email": "thomas@yahoo.com",
+        "password": "123456789",
+        "profile_picture": "/profile_pictures/31071206-1a6a-4350-99e0-47d1cb3449ba.jpg"
+    },
+    {
+        "id": "c28c7d6e-32fd-4f3e-b5a7-96630ee18e38",
+        "username": "JeNNy*",
+        "email": "jenny123@gmail.com",
+        "password": "123456789",
+        "profile_picture": "/profile_pictures/224356cd-4965-49cc-a8b8-c2d77ba8f30c.jpg"
+    }
+]

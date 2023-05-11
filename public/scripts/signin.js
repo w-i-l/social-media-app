@@ -6,17 +6,21 @@ window.onload = () => {
     const password = form.getElementsByTagName('input')[1];
 
     const user = localStorage.getItem("user");
-    console.log(user);
 
     if(user){
-        email.value = user[0][-1];
-        password.value = user[1][-1];
+        email.value = user['email'];
+        password.value = '';
+    }
+    else{
+        email.value = '';
+        password.value = '';
     }
 
-    submit.addEventListener("submit", e => {
-        e.preventDefault();
-        e.stopPropagation();
+    form.addEventListener("submit", e => {
         const data = new FormData(e.target);
-        localStorage.setItem("user", JSON.stringify([...data.entries()]));
+        localStorage.setItem("user", JSON.stringify({
+            email: data.get('email'),
+            password: data.get('password')
+        }));
     })
 }

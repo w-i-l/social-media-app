@@ -20,8 +20,19 @@ app.get('/', (req, res) =>{
 	res.redirect('/sign')
 })
 
+
 const signRouter = require('./views/SignIn/signin.js');
 app.use('/sign', signRouter);
+
+app.use((req, res, next) => {
+	const {cookies} = req;
+	if(cookies['id']){
+		next();
+	}
+	else{
+		res.redirect('/sign')
+	}
+})
 
 const authRouter = require('./views/Auth/auth.js');
 app.use('/auth', authRouter);
