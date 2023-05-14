@@ -5,7 +5,7 @@ window.onload = () => {
     const email = form.getElementsByTagName('input')[0];
     const password = form.getElementsByTagName('input')[1];
 
-    const user = localStorage.getItem("user");
+    const user = JSON.parse(localStorage.getItem("user"));
 
     if(user){
         email.value = user['email'];
@@ -20,7 +20,6 @@ window.onload = () => {
         const data = new FormData(e.target);
         localStorage.setItem("user", JSON.stringify({
             email: data.get('email'),
-            password: data.get('password')
         }));
     })
 }

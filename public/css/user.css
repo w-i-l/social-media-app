@@ -60,3 +60,9 @@ body{
   width: 150px;
   border-radius: 50%;
 }
+
+@media(max-width: 480px){
+  .user #profile_picture{
+    width: 75px;
+  }
+}

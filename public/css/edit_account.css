@@ -132,4 +132,15 @@ body > div.edit > form > div.change_profile_picture > img{
     body > div.edit > form > div.change_profile_picture > img{
         width: 100px;
     }
+
+    body > div.edit > form > input[type=submit]{
+        width: 150px;
+        background-color: var(--white);
+        color: var(--background_primary);
+    }
+
+    body > div.edit > form > input[type=submit]:hover{
+        background-color: var(--accent_secondary);
+    }
+    
 }

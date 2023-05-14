@@ -71,19 +71,28 @@ body{
     gap: 10px;
 }
 
-.credientials > a{
+
+
+.info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.account > .info > h4{
+    color: var(--white);
+    font-size: x-large;
+}
+
+.info > a{
     color: var(--accent_secondary);
     text-decoration: none;
     font-size: 1.3rem;
 }
 
-.credientials > a:hover{
+.info > a:hover{
     color: var(--white);
-}
-
-.account > h4{
-    color: var(--white);
-    font-size: x-large;
 }
 
 .posts{
@@ -93,12 +102,12 @@ body{
     flex-wrap: wrap;
 }
 
-body > div.account > form > input[type=submit]{
+#logout{
     border: 0px;
     border-radius: 10px;
     background-color: color(--white);
     font-weight: 600;
-    min-width: 15vw;
+    width: 15vw;
     height: 5vh;
 }
 
@@ -111,4 +120,24 @@ body > div.account > form > input[type=submit]:hover{
     aspect-ratio: 1/1;
     width: 150px;
     border-radius: 50%;
+}
+
+@media(max-width:480px){
+    .greet #profile_picture{
+        width: 50px;
+    }
+
+    .info a{
+        font-size: 2rem;
+    }
+
+    #logout{
+        width: 150px;
+        background-color: var(--white);
+        color: var(--background_primary);
+    }
+
+    #logout:hover{
+        background-color: var(--accent_secondary);
+    }
 }
