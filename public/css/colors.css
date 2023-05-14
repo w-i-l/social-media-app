@@ -8,6 +8,10 @@
     --post_background:#111114;
 }
 
+*{
+  transition: background, background-color, color 0.3s;
+}
+
 body{
     overflow-x: hidden;
 }

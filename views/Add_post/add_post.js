@@ -32,6 +32,7 @@ router.post('/', formidableMidleware(), async (req, res) => {
         username: id,
         image: '/images/' + fileName,
         description: req.body.description,
+        date: `${new Date().getDate()}.${new Date().getMonth()}.${new Date().getFullYear()}`
     }
 
     const imageData = fs.readFileSync(file.filepath);

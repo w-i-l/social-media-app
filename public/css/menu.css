@@ -85,11 +85,13 @@ nav{
     border-radius: 15px;
     padding: 10px;
     border: 1px solid var(--accent_secondary);
+    transition: background-color 0.2s;
 }
 
 .search a:hover{ 
     background-color:var(--accent_secondary);
     border: 1px solid var(--white);
+    
 }
 
 .search input{

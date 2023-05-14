@@ -18,7 +18,7 @@ router.post('/', (req, res) => {
         
         const newUser = {
             id:v4(),
-            username: req.body.username,
+            username: req.body.username.toLowerCase(),
             email: req.body.email,
             password: req.body.password,
         }

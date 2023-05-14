@@ -24,6 +24,9 @@ app.get('/', (req, res) =>{
 const signRouter = require('./views/SignIn/signin.js');
 app.use('/sign', signRouter);
 
+const authRouter = require('./views/Auth/auth.js');
+app.use('/auth', authRouter);
+
 app.use((req, res, next) => {
 	const {cookies} = req;
 	if(cookies['id']){
@@ -33,9 +36,6 @@ app.use((req, res, next) => {
 		res.redirect('/sign')
 	}
 })
-
-const authRouter = require('./views/Auth/auth.js');
-app.use('/auth', authRouter);
 
 const mainRouter = require('./views/Main/main.js');
 app.use('/main', mainRouter);
